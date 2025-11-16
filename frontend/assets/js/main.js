@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Backend Base URL (Change according to Flask/FastAPI URL)
-const BASE_URL = "https://exams-mock-backend.onrender.com";
+const BASE_URL = "https://exams-mock-backend.onrender.com/api";
 
 
 // ==============================
