@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "https://exams-mock-backend.onrender.com/api";
 
 document.getElementById("loginBtn").addEventListener("click", async () => {
     const username = document.getElementById("adminUser").value;

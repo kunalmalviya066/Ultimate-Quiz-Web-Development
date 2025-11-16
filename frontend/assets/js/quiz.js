@@ -1,7 +1,7 @@
 // =======================================================
 // INITIAL SETUP
 // =======================================================
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://exams-mock-backend.onrender.com";
 
 let quizSettings = JSON.parse(localStorage.getItem("quizSettings"));
 let questions = [];
