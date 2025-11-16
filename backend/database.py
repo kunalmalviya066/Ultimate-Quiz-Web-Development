@@ -5,10 +5,10 @@ from mysql.connector import pooling
 # MySQL Database Configuration
 # ==============================
 db_config = {
-    "host": "localhost",
-    "user": "root",            # change if needed
-    "password": "Kunalm#8874",            # add your MySQL password
-    "database": "quiz_app",    # your database name
+    "host": "sql311.infinityfree.com",
+    "user": "if0_40429418",            # change if needed
+    "password": "7PkxMqbDnQ",            # add your MySQL password
+    "database": "f0_40429418_quiz_app",    # your database name
     "port": 3306
 }
 
