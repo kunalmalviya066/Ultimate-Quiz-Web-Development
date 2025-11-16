@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | Mock Practice</title>
+
+    <link rel="stylesheet" href="assets/css/quiz.css">
+
+    <style>
+        /* PAUSE OVERLAY DESIGN */
+        #pauseOverlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85);
+            color: white;
+            font-size: 28px;
+            text-align: center;
+            padding-top: 15%;
+            z-index: 9999;
+        }
+
+        #pauseOverlay button {
+            padding: 12px 24px;
+            font-size: 20px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* Pause button style */
+        .pause-btn {
+            background: #ff9800;
+            padding: 8px 14px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PAUSE OVERLAY -->
+    <div id="pauseOverlay">
+        <h2>Quiz Paused</h2>
+        <p>You minimized or switched the tab/window</p>
+        <button id="resumeBtn">Resume Quiz</button>
+    </div>
+
+    <!-- TOP BAR -->
+    <header class="top-bar">
+        <div id="quizInfo">
+            <h2>Quiz in Progress</h2>
+            <p id="questionCounter">Question 1 / 1</p>
+        </div>
+
+        <div id="timerBox">
+            <span>Time Left:</span>
+            <h3 id="timer">00:00</h3>
+        </div>
+
+        <!-- NEW PAUSE BUTTON -->
+        <button id="pauseBtn" class="pause-btn">Pause</button>
+    </header>
+
+
+    <!-- MAIN QUIZ AREA -->
+    <section class="quiz-area" id="quizContainer">
+
+        <!-- Question Text -->
+        <div class="question-box">
+            <h3 id="questionText">Loading...</h3>
+        </div>
+
+        <!-- Options -->
+        <div id="optionsContainer" class="options-list">
+            <!-- Options will be injected by quiz.js -->
+        </div>
+
+        <!-- Review Button -->
+        <button id="markReviewBtn" class="review-btn">Mark for Review</button>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button id="prevBtn" class="nav-btn">Previous</button>
+            <button id="nextBtn" class="nav-btn">Next</button>
+            <button id="submitBtn" class="submit-btn">Submit Quiz</button>
+        </div>
+
+    </section>
+
+
+    <!-- RIGHT SIDE PANEL (QUESTION NUMBERS) -->
+    <aside class="question-panel">
+        <h3>Questions</h3>
+        <div id="questionList" class="question-list">
+            <!-- Filled by JS -->
+        </div>
+    </aside>
+
+
+    <!-- JavaScript -->
+    <script src="assets/js/timer.js"></script>
+    <script src="assets/js/quiz.js"></script>
+
+    <!-- Anti-cheat JS -->
+    <script>
+        let isPaused = false;
+
+        function pauseQuiz() {
+            if (isPaused) return;
+            isPaused = true;
+
+            clearInterval(timerInterval);
+
+            document.getElementById("quizContainer").style.display = "none";
+            document.getElementById("pauseOverlay").style.display = "block";
+        }
+
+        function resumeQuiz() {
+            if (!isPaused) return;
+            isPaused = false;
+
+            document.getElementById("pauseOverlay").style.display = "none";
+            document.getElementById("quizContainer").style.display = "block";
+
+            startTimer(); // Resume timer
+        }
+
+        document.getElementById("pauseBtn").addEventListener("click", pauseQuiz);
+        document.getElementById("resumeBtn").addEventListener("click", resumeQuiz);
+
+
+        /* AUTO PAUSE ON TAB SWITCH */
+        document.addEventListener("visibilitychange", () => {
+            if (document.hidden) {
+                pauseQuiz();
+                alert("Quiz paused because you switched tab or minimized the screen.");
+            }
+        });
+
+        window.onblur = () => {
+            pauseQuiz();
+        };
+
+
+        /* DISABLE COPY, PASTE, RIGHT-CLICK */
+        document.addEventListener("copy", e => e.preventDefault());
+        document.addEventListener("paste", e => e.preventDefault());
+        document.addEventListener("cut", e => e.preventDefault());
+        document.addEventListener("contextmenu", e => e.preventDefault());
+
+
+        /* DISABLE CHEAT SHORTCUTS */
+        document.onkeydown = function(e) {
+            if (
+                e.key === "F12" ||
+                (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "C")) ||
+                (e.ctrlKey && (e.key === "U" || e.key === "C" || e.key === "V"))
+            ) {
+                e.preventDefault();
+                return false;
+            }
+        };
+    </script>
+
+</body>
+</html>

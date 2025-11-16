@@ -1,0 +1,36 @@
+quiz_app/
+│
+├── backend/
+│   ├── app.py
+│   ├── database.py
+│   ├── models/
+│   │   ├── subjects.py
+│   │   ├── topics.py
+│   │   ├── questions.py
+│   │   ├── results.py
+│   └── routes/
+│       ├── quiz_routes.py
+│       ├── result_routes.py
+│
+├── frontend/
+│   ├── index.html
+│   ├── quiz.html
+│   ├── result.html
+│   ├── daily_mock.html
+│   ├── full_mock.html
+│   ├── assets/
+│   │   ├── css/
+│   │   │   ├── style.css
+│   │   │   └── quiz.css
+│   │   ├── js/
+│   │   │   ├── main.js
+│   │   │   ├── quiz.js
+│   │   │   ├── timer.js
+│   │   │   ├── results.js
+│   │   └── images/
+│
+├── data/
+│   └── questions.json (optional import format)
+│
+├── README.md
+└── requirements.txt

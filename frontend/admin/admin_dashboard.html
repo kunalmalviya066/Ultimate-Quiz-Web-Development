@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body class="admin-body">
+
+    <div class="dashboard-box">
+        <h2>Admin Dashboard</h2>
+        <p>Welcome! Choose an option below:</p>
+
+        <div class="dashboard-links">
+
+            <a href="subjects.html" class="db-btn">Manage Subjects</a>
+            <a href="topics.html" class="db-btn">Manage Topics</a>
+            <a href="questions.html" class="db-btn">Manage Questions</a>
+
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+    </div>
+
+    <script>
+        // Protect dashboard (require login)
+        if (localStorage.getItem("adminLogged") !== "yes") {
+            window.location.href = "admin_login.html";
+        }
+
+        document.getElementById("logoutBtn").addEventListener("click", () => {
+            localStorage.removeItem("adminLogged");
+            window.location.href = "admin_login.html";
+        });
+    </script>
+
+</body>
+</html>

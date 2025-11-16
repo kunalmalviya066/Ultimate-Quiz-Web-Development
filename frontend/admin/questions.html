@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Questions</title>
+
+    <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body class="admin-body">
+
+    <div class="crud-box">
+        <h2>Manage Questions</h2>
+
+        <!-- Subject & Topic Select -->
+        <div class="crud-form">
+            <select id="subjectSelect"></select>
+            <select id="topicSelect"></select>
+        </div>
+
+        <!-- Add Question Form -->
+        <div class="question-form">
+
+            <textarea id="qText" rows="3" placeholder="Enter question"></textarea>
+
+            <input type="text" id="optA" placeholder="Option A">
+            <input type="text" id="optB" placeholder="Option B">
+            <input type="text" id="optC" placeholder="Option C">
+            <input type="text" id="optD" placeholder="Option D">
+            
+
+            <select id="correctOpt">
+                <option value="0">Correct Answer: A</option>
+                <option value="1">Correct Answer: B</option>
+                <option value="2">Correct Answer: C</option>
+                <option value="3">Correct Answer: D</option>
+            </select>
+
+            <textarea id="explanation" rows="2" placeholder="Explanation"></textarea>
+            
+            <button id="addQBtn">Add Question</button>
+        </div>
+
+        <h3>Questions List</h3>
+
+        <table class="crud-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Question</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="questionsTable"></tbody>
+        </table>
+
+        <a href="admin_dashboard.html" class="back-btn">⬅ Back to Dashboard</a>
+    </div>
+
+    <script src="assets/js/admin_questions.js"></script>
+
+</body>
+</html>

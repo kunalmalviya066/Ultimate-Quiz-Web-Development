@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Builder | Mock Practice</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1>Mock Practice Platform</h1>
+        <p>Select your preferences and start a quiz</p>
+    </header>
+
+
+    <!-- QUIZ BUILDER SECTION -->
+    <section class="quiz-builder">
+
+        <!-- Select Quiz Type -->
+        <div class="form-block">
+            <label>Quiz Type:</label>
+            <select id="quizType">
+                <option value="custom">Custom Quiz</option>
+                <option value="subject">Subject-wise</option>
+                <option value="topic">Topic-wise</option>
+                <option value="dailyMock">Daily Mock</option>
+                <option value="fullMock">Full Mock</option>
+            </select>
+        </div>
+
+
+        <!-- Subjects (Loaded from API) -->
+        <div class="form-block">
+            <label>Select Subject(s):</label>
+            <div id="subjectsContainer" class="checkbox-list">
+                <!-- JS Will Populate -->
+            </div>
+        </div>
+
+
+        <!-- Topics Based on subject -->
+        <div class="form-block">
+            <label>Select Topic(s):</label>
+            <div id="topicsContainer" class="checkbox-list">
+                <!-- JS Will Populate -->
+            </div>
+        </div>
+
+
+        <!-- Number of Questions -->
+        <div class="form-block">
+            <label>Number of Questions:</label>
+            <input type="number" id="questionCount" min="1" placeholder="e.g., 20">
+        </div>
+
+
+        <!-- Timer -->
+        <div class="form-block">
+            <label>Timer (minutes):</label>
+            <input type="number" id="timerValue" min="1" placeholder="e.g., 30">
+        </div>
+
+
+        <!-- START BUTTON -->
+        <button id="startQuizBtn" class="start-btn">Start Quiz</button>
+
+    </section>
+
+
+    <!-- JS -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

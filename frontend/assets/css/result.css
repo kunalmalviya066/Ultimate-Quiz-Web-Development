@@ -1,0 +1,194 @@
+/* ============================================
+   GLOBAL
+============================================ */
+body {
+    background: linear-gradient(135deg, #f4f7fb, #e8edf5);
+    padding: 25px;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    color: #1e293b;
+}
+
+/* Glass Variables */
+:root {
+    --primary: #3b82f6;
+    --primary-dark: #2563eb;
+    --success: #22c55e;
+    --danger: #ef4444;
+    --glass-bg: rgba(255, 255, 255, 0.75);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+/* ============================================
+   HEADER
+============================================ */
+.header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.header p {
+    font-size: 17px;
+    color: #475569;
+}
+
+/* ============================================
+   SUMMARY CARD
+============================================ */
+.summary-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.summary-card {
+    width: 90%;
+    max-width: 950px;
+    background: var(--glass-bg);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Score Box */
+.score-box {
+    background: var(--primary);
+    color: white;
+    padding: 28px;
+    border-radius: 14px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(59,130,246,0.3);
+}
+
+.score-box h2 {
+    font-size: 48px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+/* Stats Section */
+.stats p {
+    font-size: 17px;
+    margin: 7px 0;
+    color: #1e293b;
+}
+
+.stats strong {
+    color: var(--primary-dark);
+}
+
+/* ============================================
+   ANALYSIS SECTION
+============================================ */
+.analysis-section {
+    width: 90%;
+    max-width: 950px;
+    background: var(--glass-bg);
+    margin: 0 auto 35px auto;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+}
+
+.analysis-section h2 {
+    margin-bottom: 18px;
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+/* ============================================
+   DETAILED REVIEW
+============================================ */
+.review-section {
+    width: 90%;
+    max-width: 950px;
+    margin: 0 auto 45px auto;
+}
+
+.review-section h2 {
+    margin-bottom: 18px;
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Review Card */
+.review-card {
+    background: var(--glass-bg);
+    padding: 22px;
+    border-radius: 14px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(8px);
+}
+
+.review-card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.option {
+    margin-left: 18px;
+    font-size: 16px;
+    margin-top: 6px;
+}
+
+/* correct & wrong markings */
+.correct {
+    color: var(--success);
+    font-weight: 700;
+}
+
+.wrong {
+    color: var(--danger);
+    font-weight: 700;
+}
+
+/* Explanation Box */
+.explanation {
+    background: rgba(240, 244, 255, 0.9);
+    border-left: 5px solid var(--primary);
+    padding: 12px 18px;
+    margin-top: 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #374151;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media(max-width: 700px) {
+    .summary-card {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .score-box {
+        width: 100%;
+    }
+}

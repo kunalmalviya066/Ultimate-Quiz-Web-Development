@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Topics</title>
+
+    <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body class="admin-body">
+
+    <div class="crud-box">
+        <h2>Manage Topics</h2>
+
+        <!-- Subject Selection -->
+        <div class="crud-form">
+            <select id="subjectSelect"></select>
+        </div>
+
+        <!-- Add Topic -->
+        <div class="crud-form">
+            <input type="text" id="topicName" placeholder="Enter topic name">
+            <button id="addTopicBtn">Add Topic</button>
+        </div>
+
+        <h3>Topics List</h3>
+        <table class="crud-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Topic Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="topicsTable"></tbody>
+        </table>
+
+        <a href="admin_dashboard.html" class="back-btn">⬅ Back to Dashboard</a>
+    </div>
+
+    <script src="assets/js/admin_topics.js"></script>
+
+</body>
+</html>

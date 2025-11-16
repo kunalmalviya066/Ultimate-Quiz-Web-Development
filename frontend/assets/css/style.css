@@ -1,0 +1,142 @@
+/* ================================
+   GLOBAL STYLES
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #222;
+    padding: 20px;
+}
+
+/* ================================
+   HEADER
+================================= */
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.header p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* ================================
+   QUIZ BUILDER CONTAINER
+================================= */
+
+.quiz-builder {
+    width: 100%;
+    max-width: 700px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Form Block */
+.form-block {
+    margin-bottom: 20px;
+}
+
+.form-block label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-block input,
+.form-block select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-block input:focus,
+.form-block select:focus {
+    border-color: #3498db;
+}
+
+/* ================================
+   CHECKBOX CONTAINER
+================================= */
+
+.checkbox-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkbox-list label {
+    background: #f1f1f1;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.2s;
+}
+
+.checkbox-list label:hover {
+    background: #e6e6e6;
+}
+
+.checkbox-list input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+/* ================================
+   START BUTTON
+================================= */
+
+.start-btn {
+    width: 100%;
+    background: #3498db;
+    color: white;
+    padding: 12px 0;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.start-btn:hover {
+    background: #2e86c1;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 600px) {
+    .quiz-builder {
+        padding: 18px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+}

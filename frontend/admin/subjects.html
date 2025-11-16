@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Subjects</title>
+
+    <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body class="admin-body">
+
+    <div class="crud-box">
+        <h2>Manage Subjects</h2>
+
+        <!-- Add Subject -->
+        <div class="crud-form">
+            <input type="text" id="subjectName" placeholder="Enter subject name">
+            <button id="addBtn">Add Subject</button>
+        </div>
+
+        <h3>Subjects List</h3>
+        <table class="crud-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Subject Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="subjectsTable"></tbody>
+        </table>
+
+        <a href="admin_dashboard.html" class="back-btn">⬅ Back to Dashboard</a>
+    </div>
+
+    <script src="assets/js/admin_subjects.js"></script>
+</body>
+</html>

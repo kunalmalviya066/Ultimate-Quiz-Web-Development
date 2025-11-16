@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/result.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1>Your Quiz Results</h1>
+        <p>Review your performance and improve!</p>
+    </header>
+
+    <!-- RESULTS SUMMARY CARD -->
+    <section class="summary-section">
+
+        <div class="summary-card">
+            <div class="score-box">
+                <h2 id="scoreDisplay">-- / --</h2>
+                <p>Total Score</p>
+            </div>
+
+            <div class="stats">
+                <p><strong>Total Questions:</strong> <span id="totalQ">--</span></p>
+                <p><strong>Correct:</strong> <span id="correctQ">--</span></p>
+                <p><strong>Incorrect:</strong> <span id="incorrectQ">--</span></p>
+                <p><strong>Accuracy:</strong> <span id="accuracy">--%</span></p>
+                <p><strong>Time Taken:</strong> <span id="timeTaken">--</span></p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ANALYTICS -->
+    <section class="analysis-section">
+        <h2>Performance Analysis</h2>
+
+        <canvas id="topicChart"></canvas>
+    </section>
+
+
+    <!-- DETAILED REVIEW -->
+    <section class="review-section">
+        <h2>Answer Review</h2>
+
+        <div id="reviewContainer" class="review-list">
+            <!-- JS will load questions + answers + explanation -->
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/result.js"></script>
+   
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import Questions via CSV</title>
+
+    <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body class="admin-body">
+
+    <div class="crud-box">
+        <h2>Import Questions (CSV Upload)</h2>
+
+        <p><b>CSV Format Required:</b></p>
+        <pre class="sample-box">
+topic_id,question,option_a,option_b,option_c,option_d,answer,explanation
+1,What is 2+2?,3,4,2,5,1,Correct answer is 4
+1,Speed formula?,d/t,t/d,mg,v/t,0,Speed = distance/time
+        </pre>
+
+        <div class="crud-form">
+            <input type="file" id="csvFile" accept=".csv">
+            <button id="uploadBtn">Upload</button>
+        </div>
+
+        <p id="importMessage"></p>
+
+        <a href="admin_dashboard.html" class="back-btn">⬅ Back to Dashboard</a>
+    </div>
+
+    <script src="assets/js/admin_import.js"></script>
+</body>
+</html>
